@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Cocktails</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+      </button>
+      <a class="navbar-brand" href="#myPage"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home.html">HOME</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">START MIXING
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="cocktails.html">Cocktail</a></li>
+            <li><a href="mocktails.html">Mocktail</a></li>
+          </ul>
+        </li>
+        <li><a href="events.html">EVENTS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Container (Start Mixing Section) -->
+<div id="startMixing" class="container text-center">
+  <h3>COCKTAIL</h3>
+  <p><em>/ˈkäkˌtāl/</em></p>
+  <p>Cocktails are great for alcoholic drinkers! It consists of a spirit mixture or several spirit mixed with other ingredients, which will give a taste of satisfaction.</p>
+  
+  <!-- 1st row -->
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Margarita</strong></p><br>
+      <a href="#marga" data-toggle="collapse">
+        <img src="marga.jpg" class="img-circle person" alt="Margarita" width="255" height="255">
+      </a>
+      <div id="marga" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Don Julio Blanco Tequila</li>
+          <li>Grand Marnier</li>
+          <li>Lime Juice</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a shaker with ice</li>
+          <li>Add Grand Marnier Cordon Rouge Liquer, Don Julio Blanco Tequila and Lime to the shaker.</li>
+          <li>Shake until cold</li>
+          <li>Strain into a short glass</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Martini</strong></p><br>
+      <a href="#mar" data-toggle="collapse">
+        <img src="mar.jpg" class="img-circle person" alt="Martini" width="255" height="255">
+      </a>
+      <div id="mar" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Gordon's London Dry Gin</li>
+          <li>Dry Vermouth</li>
+          <li>Olive</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a shaker with ice</li>
+          <li>Add Gordon's London Dry Gin and dry vermouth to the shaker</li>
+          <li>Shake until cold</li>
+          <li>Strain into a martini glass</li>
+          <li>Garnish with an olive</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Manhattan</strong></p><br>
+      <a href="#man" data-toggle="collapse">
+        <img src="man.jpg" class="img-circle person" alt="Manhattan" width="255" height="255">
+      </a>
+      <div id="man" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>The Singleton Single Malt</li>
+          <li>Sweet Vermouth</li>
+          <li>Angostura Bitters</li>
+          <li>Orange</li>
+          <li>Maraschino Cherry</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Place The Singleton of Dufftown Malt Whisky, sweet vermouth and angostura bitters into a mixing glass.</li>
+          <li>Fill the glass with ice, stir the mixture until well combined and strain into a martini glass.</li>
+          <li>Garnish with an orange twist and maraschino cherry.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 2nd row -->
+  <br>
+  <div class="row2">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Mojito</strong></p><br>
+      <a href="#moj" data-toggle="collapse">
+        <img src="moj.jpg" class="img-circle person" alt="Mojito" width="255" height="255">
+      </a>
+      <div id="moj" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Captain Morgan® White Rum</li>
+          <li>Soda Water</li>
+          <li>Caster Sugar</li>
+          <li>Lime Wedge</li>
+          <li>Mint Sprig</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Muddle sugar and lime wedges together in a glass.</li>
+          <li>Muddle mint.</li>
+          <li>Add ice to a glass.</li>
+          <li>Add Captain Morgan White Rum® and soda.</li>
+          <li>Stir with a spoon.</li>
+          <li>Add ice and a sprig of mint.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Old Fashioned</strong></p><br>
+      <a href="#old" data-toggle="collapse">
+        <img src="old.jpg" class="img-circle person" alt="Old Fashioned" width="255" height="255">
+      </a>
+      <div id="old" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Johnnie Walker Black Label</li>
+          <li>Angostura Bitters</li>
+          <li>Sugar</li>
+          <li>Cherry</li>
+          <li>Orange</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Place a sugar cube in a glass and add a dash of angostura bitters.</li>
+          <li>Muddle until dissolved.</li>
+          <li>Fill the glass with ice.</li>
+          <li>Pour in Johnnie Walker Black Label Blended Scotch Whisky.</li>
+          <li>Garnish with a cherry and orange slice.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Bloody Mary</strong></p><br>
+      <a href="#blood" data-toggle="collapse">
+        <img src="blood.jpg" class="img-circle person" alt="Bloody Mary" width="255" height="255">
+      </a>
+      <div id="blood" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Smirnogg No. 21 Vodka </li>
+          <li>Tomato Juice</li>
+          <li>Lemon</li>
+          <li>Tabasco Sauce</li>
+          <li>Worcestershire Sauce</li>
+          <li>Pepper</li>
+          <li>Celery</li>
+          <li>Lemon Wedge</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a glass with ice</li>
+          <li>Pour Smirnoff No. 21 Vodka and tomato juice into the glass</li>
+          <li>Add a squeeze of lemon, dashes of tabasco and worcestershire sauce and some black pepper.</li>
+          <li>Stir thoroughly.</li>
+          <li>Garnish with a celery stalk.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 3rd row -->
+  <br>
+  <div class="row3">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Cosmopolitan</strong></p><br>
+      <a href="#cos" data-toggle="collapse">
+        <img src="cos.jpg" class="img-circle person" alt="Cosmopolitan" width="255" height="255">
+      </a>
+      <div id="cos" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Smirnoff No. 21 Vodka</li>
+          <li>Grand Marnier</li>
+          <li>Cranberry Juice</li>
+          <li>Lime Juice</li>
+          <li>Lime Twist</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a shaker with ice</li>
+          <li>Add Smirnoff No. 21 Vodka, Grand Marnier, cranberry juice and lime juice into the shaker.</li>
+          <li>Strain into a martini glass.</li>
+          <li>Garnish with a twist of lime peel.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Piña Colada</strong></p><br>
+      <a href="#pina" data-toggle="collapse">
+        <img src="pina.jpg" class="img-circle person" alt="Piña Colada" width="255" height="255">
+      </a>
+      <div id="pina" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Captain Morgan Original Spiced Gold</li>
+          <li>Coconut Cream<</li>
+          <li>Pineapple Chunks</li>
+          <li>Cherry to Garnish</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Put a large hand full of crushed ice into your blender.</li>
+          <li>Add the Captain Morgan Original Spiced Gold, coconut cream and pineapple chunks into the blender.</li>
+          <li>Blend until smooth.</li>
+          <li>Pour into a tall glass.</li>
+          <li>Garnish with a cherry and chunk of pineapple.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Negroni</strong></p><br>
+      <a href="#neg" data-toggle="collapse">
+        <img src="neg.jpg" class="img-circle person" alt="Negroni" width="255" height="255">
+      </a>
+      <div id="neg" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Gordon's London Dry Gin</li>
+          <li>Vermouth Rosso</li>
+          <li>Campari</li>
+          <li>Orange</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a glass with ice.</li>
+          <li>Pour Gordon's London Dry Gin, vermouth Rosso and campari into the glass.</li>
+          <li>Stir the mixture until well combined.</li>
+          <li>Strain into a glass filled with ice.</li>
+          <li>Garnish with a twist of orange peel.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 4th row -->
+  <br>
+  <div class="row4">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Mint Julep</strong></p><br>
+      <a href="#mint" data-toggle="collapse">
+        <img src="mint.jpeg" class="img-circle person" alt="Mint Julep" width="255" height="255">
+      </a>
+      <div id="mint" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Bulleit Bourbon</li>
+          <li>Sugar Syrup</li>
+          <li>Mint Leaves</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Add mint and sugar syrup to a glass.</li>
+          <li>Gently press the mint.</li>
+          <li>Add crushed ice and Bulleit Bourbon to the glass.<</li>
+          <li>Stir thoroughly, then add crushed ice.</li>
+          <li>Add a straw and garnish with mint.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Strawberry Daiquiri</strong></p><br>
+      <a href="#dai" data-toggle="collapse">
+        <img src="dai.jpg" class="img-circle person" alt="Strawberry Daiquiri" width="255" height="255">
+      </a>
+      <div id="dai" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Captain Morgan Original Spiced Gold</li>
+          <li>Fresh Lime Juice</li>
+          <li>Sugar Syrup</li>
+          <li>Fresh Chopped Strawberries</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill your shaker 3/4 full with cubed ice.</li>
+          <li>Pour in Captain Morgan Original Spiced Gold, sugar syrup, fresh lime juice and 3 chopped strawberries.</li>
+          <li>Shake vigorously for 10 seconds until cold.</li>
+          <li>Strain into a martini glass and garnish with a strawberry.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Gimlet</strong></p><br>
+      <a href="#gim" data-toggle="collapse">
+        <img src="gim.jpg" class="img-circle person" alt="Gimlet" width="255" height="255">
+      </a>
+      <div id="gim" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Gordon's London Dry Gin</li>
+          <li>Lime Juice</li>
+          <li>Sugar</li>
+          <li>Lemon Peek</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a glass with ice</li>
+          <li>Pour Gordon's London Dry Gin, lime juice and sugar into the glass.</li>
+          <li>Strain into a martini glass.</li>
+          <li>Garnish with a twist of lemon peel.</li>
+          <li>Contains 69 calories per serve</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 5th row -->
+  <br>
+  <div class="row5">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Tanqueray Bramble</strong></p><br>
+      <a href="#tanque" data-toggle="collapse">
+        <img src="tanque.jpg" class="img-circle person" alt="Tanqueray Bramble" width="255" height="255">
+      </a>
+      <div id="tanque" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Tanqueray London Dry Gin</li>
+          <li>Lemon Juice</li>
+          <li>Sugar Syrup</li>
+          <li>Créme De Mure</li>
+          <li>Lemon</li>
+          <li>Raspberries</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a shaker with ice</li>
+          <li>Add Tanqueray London Dry Gin, lemon juice and sugar syrup to the shaker.</li>
+          <li>Shake until cold</li>
+          <li>Strain into a tall glass filled with crushed ice.</li>
+          <li>Pour over crème de mure.</li>
+          <li>Garnish with a slice of lime and raspberries.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Long Island Iced Tea</strong></p><br>
+      <a href="#long" data-toggle="collapse">
+        <img src="long.jpg" class="img-circle person" alt="Long Island Iced Tea" width="255" height="255">
+      </a>
+      <div id="long" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Captain Morgan Original Spiced Gold</li>
+          <li>Smirnoff No. 21 Vodka</li>
+          <li>Gordon's London Dry Gin</li>
+          <li>Don Julio Blanco Tequila</li>
+          <li>Orange Liqueur</li>
+          <li>Sugar Syrup</li>
+          <li>Lemon Juice</li>
+          <li>Lime Juice</li>
+          <li>Cola</li>
+          <li>Lemon</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a shaker with ice</li>
+          <li>Add Captain Morgan Original Spiced Gold, Smirnoff No. 21 Vodka, Gordon's London Dry Gin, orange liqueur, Don Julio Blanco Tequila, sugar syrup, lemon juice and lime juice to the shaker.</li>
+          <li>Shake until cold</li>
+          <li>Strain into a glass filled with ice</li>
+          <li>Top up with cola</li>
+          <li>Garnish with a lemon slice</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Sazerac</strong></p><br>
+      <a href="#saz" data-toggle="collapse">
+        <img src="saz.jpg" class="img-circle person" alt="Sazerac" width="255" height="255">
+      </a>
+      <div id="saz" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Bulleit Bourbon</li>
+          <li>Sugar</li>
+          <li>Peychaud's Bitters</li>
+          <li>Angostura Bitters</li>
+          <li>Absinthe</li>
+          <li>Lemon Peel</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a short glass with ice.</li>
+          <li>Top up with water and leave to chill.</li>
+          <li>Place a sugar cube in a new glass and add bitters.</li>
+          <li>Muddle until dissolved.</li>
+          <li>Add two or three ice cubes.</li>
+          <li>Pour in Bulleit Bourbon.</li>
+          <li>Stir well.</li>
+          <li>Discard the ice and water from the first glass.</li>
+          <li>Rinse the glass with absinthe.</li>
+          <li>Strain the cocktail into the glass. Do not add ice.</li>
+          <li>Garnish with a strip of lemon peel zest.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 6th row -->
+  <br>
+  <div class="row6">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Gin and Tonic</strong></p><br>
+      <a href="#gin" data-toggle="collapse">
+        <img src="gin.jpg" class="img-circle person" alt="Gin and Tonic" width="255" height="255">
+      </a>
+      <div id="gin" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Gordon's London Dry Gin</li>
+          <li>GTonic Water</li>
+          <li>Lime Juice</li>
+          <li>Lime</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a glass with ice.</li>
+          <li>Pour Gordon's London Dry Gin, tonic water and lime juice into the glass.</li>
+          <li>Garnish with lime wedges.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Tanqueray Tom Collins</strong></p><br>
+      <a href="#tom" data-toggle="collapse">
+        <img src="tom.jpg" class="img-circle person" alt="Tanqueray Tom Collins" width="255" height="255">
+      </a>
+      <div id="tom" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Tanqueray London Dry Gin</li>
+          <li>Lemon Juice</li>
+          <li>Sugar Syrup</li>
+          <li>Water</li>
+          <li>Lemon</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a glass with ice.</li>
+          <li>Pour Tanqueray London Dry Gin, lemon juice and sugar syrup into the glass.</li>
+          <li>Top up with soda water.</li>
+          <li>Garnish with a lemon wedge.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>French 75</strong></p><br>
+      <a href="#fre" data-toggle="collapse">
+        <img src="fre.jpg" class="img-circle person" alt="French 75" width="255" height="255">
+      </a>
+      <div id="fre" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Tanqueray London Dry Gin</li>
+          <li>Lemon Juice</li>
+          <li>Sugar Syrup</li>
+          <li>Champagne</li>
+          <li>Lemon Peel</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Fill a shaker with ice.</li>
+          <li>Add Tanqueray London Dry Gin, lemon juice and sugar syrup to the shaker.</li>
+          <li>Shake until cold</li>
+          <li>Strain into a champagne flute and top with champagne.</li>
+          <li>Garnish with a twist of lemon.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
