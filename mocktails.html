@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Events</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+      </button>
+      <a class="navbar-brand" href="#myPage"><img src="t2.png" class="img-rounded" alt="Bitro Logo" width="90" height="60"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home.html">HOME</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">START MIXING
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="cocktails.html">Cocktail</a></li>
+            <li><a href="mocktails.html">Mocktail</a></li>
+          </ul>
+        </li>
+        <li><a href="events.html">EVENTS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Container (Start Mixing Section) -->
+<div id="startMixing" class="container text-center">
+  <h3>MOCKTAIL</h3>
+  <p><em>/ˈmäkˌtāl/</em></p>
+  <p>Mocktails are great for non-alcoholic drinkers! It consists a mixture of fruit juices or soft drinks, blended into perfection.</p>
+
+<!-- 1st row -->  
+  <br>
+  <div class="row1">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Dark Invader</strong></p><br>
+      <a href="#di" data-toggle="collapse">
+        <img src="di.jpg" class="img-circle person" alt="Dark Invader" width="255" height="255">
+      </a>
+      <div id="di" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>11 Blackberries</li>
+          <li>1 1/2 ounces Pineapple juice</li>
+          <li>1/2 ounce Vanilla syrup</li>
+          <li>Ice</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Combine 9 of the blackberries, the juice and syrup in a cocktail shaker; muddle well. </li>
+          <li>Add the ice and shake vigorously for 30 seconds, then strain into a cocktail (martini) glass.</li>
+          <li>Garnish with the remaining 2 blackberries (one on each side of the rim, like alien ears).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Cherry Bomb Mocktail</strong></p><br>
+      <a href="#cbm" data-toggle="collapse">
+        <img src="cbm.jpg" class="img-circle person" alt="Cherry Bomb Mocktail" width="255" height="255">
+      </a>
+      <div id="cbm" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>1 liter lemon lime soda</li>
+          <li>4 ounces grenadine</li>
+          <li>Juice from 1 lime (approx 2 tbsp)</li>
+          <li>4 maraschino cherries</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Combine soda, grenadine, and lime juice in mixing glass and stir.</li>
+          <li>Pour over rocks or ice ball in low ball glass and garnish with cherries.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Lemon Blueberry Colada</strong></p><br>
+      <a href="#lbc" data-toggle="collapse">
+        <img src="lbc.jpg" class="img-circle person" alt="Lemon Blueberry Colada" width="255" height="255">
+      </a>
+      <div id="lbc" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>8 parts San Pellegrino Limonata (or lemonade)</li>
+          <li>2 parts light coconut milk</li>
+          <li>1 part grenadine</li>
+          <li>Frozen blueberries</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Mix together all ingredients in a glass and serve cold.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2nd row -->
+
+<div id="startMixing" class="container text-center">  
+  <div class="row2" class="container text-center">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Ginger Lime Fizz</strong></p><br>
+      <a href="#glf" data-toggle="collapse">
+        <img src="glf.jpg" class="img-circle person" alt="Ginger Lime Fizz" width="255" height="255">
+      </a>
+      <div id="glf" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>12 ounces ginger beer</li>
+          <li>4 ounces seltzer water</li>
+          <li>½ to 1 ounce fresh squeezed lime juice</li>
+          <li>Limes, for garnish</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Combine ingredients in a pitcher. </li>
+          <li>Serve cold.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Virgin Moscow Mule</strong></p><br>
+      <a href="#vmm" data-toggle="collapse">
+        <img src="vmm.jpg" class="img-circle person" alt="Virgin Moscow Mule" width="255" height="255">
+      </a>
+      <div id="vmm" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>1 ounce lime juice</li>
+          <li>1/2 cup ginger beer</li>
+          <li>1 tablespoon simple syrup</li>
+          <li>2 ounces sparkling water, tonic, or club soda</li>
+          <li>Ice cubes, 3 to 5 depending on your preference</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Add all ingredients in a glass and stir well.</li>
+          <li>Garnish with a slice of lime and a small slice of ginger.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Cran-Apple Cider Mocktail</strong></p><br>
+      <a href="#cacm" data-toggle="collapse">
+        <img src="cacm.jpg" class="img-circle person" alt="Cran-Apple Cider Mocktail" width="255" height="255">
+      </a>
+      <div id="cacm" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Cinnamon sugar</li>
+          <li>1 part cranberry juice</li>
+          <li>1 part apple cider</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Rim glass with cinnamon sugar. </li>
+          <li>Combine equal parts cranberry juice and apple cider. </li>
+          <li>Garnish with a rock-candy swizzle stick.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3rd row -->
+  <br>
+  <div id="startMixing" class="container text-center">
+  <div class="row3">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Asian Pear Sparkler</strong></p><br>
+      <a href="#aps" data-toggle="collapse">
+        <img src="aps.jpg" class="img-circle person" alt="Asian Pear Sparkler" width="255" height="255">
+      </a>
+      <div id="aps" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>1 cup freshly pressed Asian pear juice (or regular pear juice)</li>
+          <li>1 teaspoon lemon juice</li>
+          <li>3/4 cups honey</li>
+          <li>1/4 cup sugar</li>
+          <li>1/4 cup sugar</li>
+          <li>1 (1-inch) piece fresh ginger, peeled and cut into coins</li>
+          <li>Small grating of fresh nutmeg</li>
+          <li>Ice</li>
+          <li>Soda water</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Combine pear juice, lemon juice, honey, sugar, rosemary, ginger, and nutmeg in a saucepan over medium heat.</li>
+          <li>Bring to a boil, then simmer on low heat for five minutes, stirring to dissolve the sugars.</li>
+          <li>Remove from heat and let stand 30 minutes.</li>
+          <li>Strain the syrup through a fine-mesh strainer and discard the solids.</li>
+          <li>Let syrup cool completely.</li>
+          <li>To serve, fill an eight-ounce glass halfway with ice cubes, add three tablespoons of syrup, fill with soda water, and stir.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Roy Rogers Mocktail</strong></p><br>
+      <a href="#rrm" data-toggle="collapse">
+        <img src="rrm.jpg" class="img-circle person" alt="Roy Rogers Mocktail" width="255" height="255">
+      </a>
+      <div id="rrm" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>1 part Grenadine</li>
+          <li>3 parts Coke or Pepsi</li>
+          <li>1 Maraschino cherry, for garnish</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Pour the ingredients into a tall glass filled with ice. </li>
+          <li>Stir well and garnish with the maraschino cherry.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Coconut Lavender Lemonade</strong></p><br>
+      <a href="#cll" data-toggle="collapse">
+        <img src="cll.jpg" class="img-circle person" alt="Coconut Lavender Lemonade" width="255" height="255">
+      </a>
+      <div id="cll" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>1 1/2 cups fresh squeezed lemon juice, from about 9 lemons</li>
+          <li>1 3/4 cups sugar</li>
+          <li>8 cups coconut water</li>
+          <li>4 cups water</li>
+          <li>1/2 recipe Lavender Simple Syrup</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Place lemon juice, sugar, coconut water, and water into a pitcher and shake or stir vigorously until all the sugar is dissolved.</li>
+          <li>Pour 1/2 of the lavender syrup into the pitcher and stir.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4th row -->
+  <br>
+  <div id="startMixing" class="container text-center">
+  <div class="row4">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Sparkling Cucumber Limeade</strong></p><br>
+      <a href="#scl" data-toggle="collapse">
+        <img src="scl.jpg" class="img-circle person" alt="Sparkling Cucumber Limeade" width="255" height="255">
+      </a>
+      <div id="scl" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>1 cup sugar</li>
+          <li>1 tablespoon lime zest</li>
+          <li>1 cup water</li>
+          <li>¼ cup fresh mint leaves</li>
+          <li>1 cup lime juice</li>
+          <li>1 medium English cucumber, halved and thinly sliced</li>
+          <li>2 cups sparkling water, chilled</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Combine the sugar, lime zest, and water in a medium saucepan over medium heat.</li>
+          <li>Bring to a simmer, stirring constantly until the sugar is dissolved.</li>
+          <li>Remove from the heat and stir in the mint leaves. </li>
+          <li>Let it sit for 30 minutes.</li>
+          <li>Strain the lime syrup through a fine mesh sieve. </li>
+          <li>Combine the syrup with the lime juice and cucumber.</li>
+          <li>Refrigerate for at least 1 hour.</li>
+          <li>When ready to serve, add in the sparkling water. Serve over ice.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Shirley Temple</strong></p><br>
+      <a href="#st" data-toggle="collapse">
+        <img src="st.jpg" class="img-circle person" alt="Shirley Temple" width="255" height="255">
+      </a>
+      <div id="st" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>1 part grenadine</li>
+          <li>8 parts ginger ale</li>
+          <li>Maraschino cherries</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Rim glass with pink Pop Rocks. </li>
+          <li>Add 4 tablespoons grenadine syrup to 16 ounces ginger ale.</li>
+          <li>Garnish with a maraschino cherry.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Sparkling Raspberry Mocktail</strong></p><br>
+      <a href="#srm" data-toggle="collapse">
+        <img src="srm.png" class="img-circle person" alt="Sparkling Raspberry Mocktail" width="255" height="255">
+      </a>
+      <div id="srm" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Frozen raspberry lemonade concentrate</li>
+          <li>3 cups cold water</li>
+          <li>Frozen raspberries</li>
+          <li>Sparkling white grape juice</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>In a small pitcher, mix frozen lemonade concentrate and three cups of water.</li>
+          <li>For ice-cubes sprinkle raspberries into an ice cube tray and then slowly pour the raspberry lemonade mix over them. </li>
+          <li>Set the remaining drink mix aside until later.</li>
+          <li>When ready to serve, add ice cubes to each glass and pour about one tablespoon of the raspberry lemonade in the bottom of each glass. </li>
+          <li>Top off the glass with sparkling grape juice.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5th row -->
+  <br>
+  <div id="startMixing" class="container text-center">
+  <div class="row5">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Dirty Dr. Pepper</strong></p><br>
+      <a href="#ddp" data-toggle="collapse">
+        <img src="ddp.jpg" class="img-circle person" alt="Dirty Dr. Pepper" width="255" height="255">
+      </a>
+      <div id="ddp" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>Ice</li>
+          <li>1 Lime</li>
+          <li>Torani Sugar Free Coconut Syrup</li>
+          <li>Dr. Pepper or Diet Dr. Pepper</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Throw a few ice cubes in your cup and add one slice of lime. </li>
+          <li>Pour Dr. Pepper in and add about one teaspoon of coconut syrup for every one cup of Dr. Pepper.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Watermelon Breeze</strong></p><br>
+      <a href="#wb" data-toggle="collapse">
+        <img src="wb.jpg" class="img-circle person" alt="Watermelon Breeze" width="255" height="255">
+      </a>
+      <div id="wb" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>3 cups cubed chilled watermelon</li>
+          <li>1 cup coconut water</li>
+          <li>Squeeze of fresh lime</li>
+          <li>Ice</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Put all ingredients in blender and blend until smooth.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Jalapeño Watermelon Agua Fresca</strong></p><br>
+      <a href="#jwaf" data-toggle="collapse">
+        <img src="jwaf.jpg" class="img-circle person" alt="Jalapeño Watermelon Agua Fresca" width="255" height="255">
+      </a>
+      <div id="jwaf" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>4 cups seedless watermelon, cut into cubes</li>
+          <li>1 cup coconut water</li>
+          <li>1/4 – 1/2 cup jalapeño simple syrup </li>
+          <li>Ice</li>
+          <li>Lime and Mint for serving (optional)</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Add watermelon, coconut water, and simple syrup (start with 1/4 cup) to a blender and process until very smooth and frothy, about 30 seconds. </li>
+          <li>Taste for spice and add more syrup, if necessary. </li>
+          <li>Serve immediately over ice with a squeeze of lime.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<!-- 6th row -->
+  <br>
+  <div id="startMixing" class="container text-center">
+  <div class="row6">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Safe Sex on the Beach</strong></p><br>
+      <a href="#ssotb" data-toggle="collapse">
+        <img src="ssotb.png" class="img-circle person" alt="Safe Sex on the Beach" width="255" height="255">
+      </a>
+      <div id="ssotb" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>3 ounces cranberry juice</li>
+          <li>3 ounces grapefruit juice</li>
+          <li>2 ounces peach nectar</li>
+          <li>1 maraschino cherry</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Pour over ice in a chilled glass and stir.</li>
+          <li>Garnish with a cherry.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Ginger-Basil Grapefruit Spritzer</strong></p><br>
+      <a href="#gbgs" data-toggle="collapse">
+        <img src="gbgs.jpg" class="img-circle person" alt="Ginger-Basil Grapefruit Spritzer" width="255" height="255">
+      </a>
+      <div id="gbgs" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>1 grapefruit plus additional grapefruit for garnish</li>
+          <li>2 cups of ice</li>
+          <li>3 x 12oz cans of ginger soda</li>
+          <li>handful of fresh basil</li>
+          <li>1/4 cup basil simple syrup </li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Place sugar and water in a small pan over medium heat until sugar is fully dissolved, about 2 minutes. </li>
+          <li>Add the basil.</li>
+          <li>Allow to steep for 15-20 minutes and strain and discard basil. </li>
+          <li>Place syrup in a glass Tupperware container or squeeze bottle if you have it.</li>
+          <li>Cover and chill for a couple hours.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="text-center"><strong>French 75 Mocktail</strong></p><br>
+      <a href="#f75m" data-toggle="collapse">
+        <img src="f75m.jpg" class="img-circle person" alt="French 75 Mocktail" width="255" height="255">
+      </a>
+      <div id="f75m" class="collapse">
+        <p><strong>Ingredients:</strong></p>
+        <ul align="left">
+          <li>2 cups ice</li>
+          <li>3 ounces fresh lemon juice</li>
+          <li>4 dashes lemon or orange (non-alcoholic) bitters</li>
+          <li>2 (6-8oz) bottles premium tonic water (such as Fever Tree or Q Tonic)</li>
+          <li>2 rock candy swizzle sticks</li>
+        </ul>
+        <p><strong>Procedure:</strong></p>
+        <ul align="left">
+          <li>Add fresh lemon juice and bitters to cocktail shaker filled with ice.</li>
+          <li>Shake until frosty then divide into two champagne flutes or coupe glasses.</li>
+          <li>Top off with tonic water until it reaches about 3/4 of the way up the glass. </li>
+          <li>Garnish with the swizzle sticks and serve immediately.</li>
+        </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
